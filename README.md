@@ -1,0 +1,3 @@
+# PoolManager
+一个基于unity的对象池，基层是ObjectPool，统一通过PoolManager管理分配、回收资源。
+我们可以用继承自ObjectPool的cubePool、EffectPool统一处理对象池
