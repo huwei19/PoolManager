@@ -64,12 +64,12 @@ public class ObjectPoolManager : MonoBehaviour
     /// <returns>The alloc.</returns>
     /// <param name="type">Type.pool类型</param>
     /// <param name="lifetime">Lifetime.存活时间</param>
-    public static GameObject Alloc(PoolType type, float lifetime = 0)
+    public static GameObject Alloc(PoolType type, string assetName, float lifetime = 0)
     {
         //根据传入type取出或创建对应类型对象池  
         ObjectPool subPool = _instacne._getpool(type);
         //从对象池中取出或创建一个对象返回  
-        GameObject returnObj = subPool.Alloc(lifetime);
+        GameObject returnObj = subPool.Alloc(lifetime, assetName);
         return returnObj;
     }
 

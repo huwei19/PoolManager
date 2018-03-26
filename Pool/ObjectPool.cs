@@ -19,7 +19,7 @@ public class ObjectPool : MonoBehaviour
 
     }
 
-    public virtual GameObject Alloc(float lifetime)
+    public virtual GameObject Alloc(float lifetime, string assetName)
     {
         //如果没有进行过初始化，先初始化创建池中的对象  
         if (!_binit)
